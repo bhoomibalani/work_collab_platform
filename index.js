@@ -49,7 +49,7 @@ app.use('/api/v1/task',require('./routes/taskRoutes'));
 
 
 app.get('/',(req,res)=>{
-console.log("everything is working fine");
+res.send("server is up and running");
 });
 
 
