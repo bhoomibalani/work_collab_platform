@@ -40,8 +40,9 @@ This is a collaborative task management application built with **Node.js**, **Ex
 2. Install dependencies:
 
    ```npm install
-
    ```
+
+
 
 3. Create .env file in root folder and add:
 
@@ -53,5 +54,4 @@ This is a collaborative task management application built with **Node.js**, **Ex
 4. Start the server:
 
 ```npm start
-
 ```
