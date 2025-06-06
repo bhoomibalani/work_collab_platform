@@ -31,27 +31,27 @@ This is a collaborative task management application built with **Node.js**, **Ex
 
 1. Clone the repo:
 
-   ```bash
-   git clone https://github.com/bhoomibalani/work_collab_platform.git
-   cd work_collab_platform
+   -bash
+    git clone https://github.com/bhoomibalani/work_collab_platform.git
+    cd work_collab_platform
 
-   ```
+   
 
 2. Install dependencies:
 
-   ```npm install
-   ```
+    -npm install
+  
 
 
 
 3. Create .env file in root folder and add:
 
-   ```PORT=
-   MONGO_URI=
-   JWT_SECRET=
-   ```
+   -PORT=
+   -MONGO_URI=
+   -JWT_SECRET=
+
 
 4. Start the server:
 
-```npm start
-```
+   -npm start
+
