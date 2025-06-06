@@ -18,6 +18,9 @@ const addTaskController = async (req, res) => {
       dueDate,
     });
 
+     const io = req.app.get('io'); 
+    io.emit('taskAdded', task);
+
     res.status(201).send({
       success: "true",
       message: "Task added",
@@ -44,8 +47,17 @@ const updateTaskController = async (req, res) => {
       { new: true }
     );
 
+    
+    if (!updatedTask) {
+      return res.status(404).send({ success: false, message: "Task not found" });
+    }
+
+      const io = req.app.get('io');
+    io.emit('taskUpdated', updatedTask);
+
+
  
-    res.status(201).send({
+    res.status(200).send({
       success: true,
       message: "task updated successfully",
     });
@@ -71,6 +83,11 @@ const updateTaskController = async (req, res) => {
                 message:"Task not found"
             })
         }
+
+          const io = req.app.get('io');
+    io.emit('taskDeleted', id);
+
+
         res.status(200).send({
             success:true,
             message:"task deleted successfully"
@@ -120,5 +137,5 @@ try{
 
 
  //update tasks status by emplyee
- 
+
 module.exports = { addTaskController, updateTaskController,deleteTaskController,viewTaskController };
